@@ -12,7 +12,7 @@ import java.util.HashMap;
 public abstract class PersistentDataUtils {
 
     private static final HashMap<Class<?>, PersistentDataType<?, ?>> tagTypes = new HashMap<>();
-    private static final String NAMESPACE = "data";
+    private static final String NAMESPACE = "foxlib";
 
     static {
         registerTagType(PersistentDataType.BYTE);
