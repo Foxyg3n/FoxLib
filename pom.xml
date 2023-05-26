@@ -14,9 +14,17 @@
           <target>17</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.3.1</version>
+        <configuration>
+          <outputDirectory>D:\Personal\Programming\MinecraftJavaPlugins\FoxLibRelease\</outputDirectory>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>FoxLib</name>
   <url>http://maven.apache.org</url>
 
