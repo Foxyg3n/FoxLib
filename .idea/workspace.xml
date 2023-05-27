@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Fixed PersistentDataUtils">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/CustomHeadUtils.java" afterDir="false" />
+    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Added Sources and JavaDocs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/SimpleListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/PersistentDataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/PersistentDataUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
