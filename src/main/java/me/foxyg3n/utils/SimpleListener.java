@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 /**
  * Simple interface which allows for quick listener implementation.
  * Example use:
- * <pre color="orange">
+ * <pre style="color:orange;">
  * pluginManager.registerEvents((SimpleListener&#x3c;PlayerInteractEvent&#x3e;) event -> {
  *     event.setCancelled(true);
  * }, plugin);

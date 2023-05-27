@@ -29,6 +29,8 @@ public abstract class Messenger {
 
     /**
      * Sets the color that the text of message() will be sent
+     *
+     ** @param color Chosed color
      */
     public static void setMessageColor(ChatColor color) {
         Messenger.messageColor = color;
@@ -36,6 +38,8 @@ public abstract class Messenger {
 
     /**
      * Sets the color that the text of info() will be sent
+     *
+     * @param color Chosed color
      */
     public static void setInfoColor(ChatColor color) {
         Messenger.infoColor = color;
@@ -43,6 +47,8 @@ public abstract class Messenger {
 
     /**
      * Sets the color that the text of warning() will be sent
+     *
+     * @param color Chosed color
      */
     public static void setWarningColor(ChatColor color) {
         Messenger.warningColor = color;
@@ -50,6 +56,8 @@ public abstract class Messenger {
 
     /**
      * Sets the color that the text of confirm() will be sent
+     *
+     * @param color Chosed color
      */
     public static void setConfirmColor(ChatColor color) {
         Messenger.confirmColor = color;
