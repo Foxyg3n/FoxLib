@@ -3,11 +3,8 @@ package me.foxyg3n.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.mojang.util.UUIDTypeAdapter;
 import me.foxyg3n.utils.adapters.ConfigurationSerializableAdapter;
-import me.foxyg3n.utils.adapters.PlayerAdapter;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -15,7 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Optional;
-import java.util.UUID;
+import java.util.function.Function;
 
 /**
  * Class for saving Bukkit data
@@ -27,6 +24,15 @@ public abstract class JsonDataSaver {
             .registerTypeHierarchyAdapter(ConfigurationSerializable.class, new ConfigurationSerializableAdapter())
             .create();
     private final File file;
+
+    /**
+     * Updates gson used to save/load data by {@link JsonDataSaver}
+     *
+     * @param function gives {@link GsonBuilder} context for updating {@link Gson} options and saves updated {@link Gson}
+     */
+    public static void updateGson(Function<GsonBuilder, Gson> function) {
+        gson = function.apply(gson.newBuilder());
+    }
 
     /**
      * Creates the DataSaver instance
