@@ -2,13 +2,11 @@ package me.foxyg3n.utils;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Utils for sending formated text to players
  */
-public abstract class Messenger {
+public class Messenger {
 
     private final String prefix;
     private ChatColor messageColor = ChatColor.WHITE;
