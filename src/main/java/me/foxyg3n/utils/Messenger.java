@@ -1,6 +1,7 @@
 package me.foxyg3n.utils;
 
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -8,11 +9,11 @@ import org.bukkit.entity.Player;
  */
 public abstract class Messenger {
 
-    private static String prefix = ChatColor.GRAY + "[" + ChatColor.GOLD + "Fox" + ChatColor.WHITE + "Lib" + ChatColor.GRAY + "]";
-    private static ChatColor messageColor = ChatColor.WHITE;
-    private static ChatColor infoColor = ChatColor.BLUE;
-    private static ChatColor warningColor = ChatColor.RED;
-    private static ChatColor confirmColor = ChatColor.GREEN;
+    private String prefix = ChatColor.GRAY + "[" + ChatColor.GOLD + "Fox" + ChatColor.WHITE + "Lib" + ChatColor.GRAY + "]";
+    private ChatColor messageColor = ChatColor.WHITE;
+    private ChatColor infoColor = ChatColor.BLUE;
+    private ChatColor warningColor = ChatColor.RED;
+    private ChatColor confirmColor = ChatColor.GREEN;
 
     /**
      * Sets the prefix that will be sent to players at the start of the message
@@ -20,8 +21,8 @@ public abstract class Messenger {
      *
      * @param prefix plugin prefix
      */
-    public static void setPrefix(String prefix) {
-        Messenger.prefix = ChatColor.translateAlternateColorCodes('&', prefix);
+    public void setPrefix(String prefix) {
+        this.prefix = ChatColor.translateAlternateColorCodes('&', prefix);
     }
 
     /**
@@ -29,8 +30,8 @@ public abstract class Messenger {
      *
      ** @param color Chosed color
      */
-    public static void setMessageColor(ChatColor color) {
-        Messenger.messageColor = color;
+    public void setMessageColor(ChatColor color) {
+        this.messageColor = color;
     }
 
     /**
@@ -38,8 +39,8 @@ public abstract class Messenger {
      *
      * @param color Chosed color
      */
-    public static void setInfoColor(ChatColor color) {
-        Messenger.infoColor = color;
+    public void setInfoColor(ChatColor color) {
+        this.infoColor = color;
     }
 
     /**
@@ -47,8 +48,8 @@ public abstract class Messenger {
      *
      * @param color Chosed color
      */
-    public static void setWarningColor(ChatColor color) {
-        Messenger.warningColor = color;
+    public void setWarningColor(ChatColor color) {
+        this.warningColor = color;
     }
 
     /**
@@ -56,48 +57,48 @@ public abstract class Messenger {
      *
      * @param color Chosed color
      */
-    public static void setConfirmColor(ChatColor color) {
-        Messenger.confirmColor = color;
+    public void setConfirmColor(ChatColor color) {
+        this.confirmColor = color;
     }
 
     /**
      * Sends formated message to the player
      *
-     * @param player Player to send the message to
+     * @param recipent Recipent of the message
      * @param text The message
      */
-    public static void message(Player player, String text) {
-        player.sendMessage(prefix + " " + messageColor + text);
+    public void message(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + messageColor + text);
     }
 
     /**
      * Sends formated information message to the player
      *
-     * @param player Player to send the message to
+     * @param recipent Recipent of the message
      * @param text The message
      */
-    public static void info(Player player, String text) {
-        player.sendMessage(prefix + " " + infoColor + text);
+    public void info(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + infoColor + text);
     }
 
     /**
      * Sends formated warning message to the player
      *
-     * @param player Player to send the message to
+     * @param recipent Recipent of the message
      * @param text The message
      */
-    public static void warning(Player player, String text) {
-        player.sendMessage(prefix + " " + warningColor + text);
+    public void warning(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + warningColor + text);
     }
 
     /**
      * Sends formated confirm message to the player
      *
-     * @param player Player to send the message to
+     * @param recipent Recipent of the message
      * @param text The message
      */
-    public static void confirm(Player player, String text) {
-        player.sendMessage(prefix + " " + confirmColor + text);
+    public void confirm(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + confirmColor + text);
     }
 
 }

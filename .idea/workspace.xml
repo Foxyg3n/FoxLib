@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Removed SimpleListener and added JsonDataSaver">
+    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Added gson update method to JsonDataSaver">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/JsonDataSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/JsonDataSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685354509241</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added gson update method to JsonDataSaver">
+      <created>1685365452017</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685365452017</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -154,6 +161,7 @@
     <MESSAGE value="Added SimpleListener" />
     <MESSAGE value="Fixed javadoc comment in SimpleListener" />
     <MESSAGE value="Removed SimpleListener and added JsonDataSaver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed SimpleListener and added JsonDataSaver" />
+    <MESSAGE value="Added gson update method to JsonDataSaver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gson update method to JsonDataSaver" />
   </component>
 </project>
