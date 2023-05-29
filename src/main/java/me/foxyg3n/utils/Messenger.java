@@ -1,10 +1,7 @@
 package me.foxyg3n.utils;
 
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
-
 import net.md_5.bungee.api.ChatColor;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.entity.Player;
 
 /**
  * Utils for sending formated text to players
