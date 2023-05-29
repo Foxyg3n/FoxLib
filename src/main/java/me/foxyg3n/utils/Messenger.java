@@ -3,25 +3,24 @@ package me.foxyg3n.utils;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Utils for sending formated text to players
  */
 public abstract class Messenger {
 
-    private String prefix = ChatColor.GRAY + "[" + ChatColor.GOLD + "Fox" + ChatColor.WHITE + "Lib" + ChatColor.GRAY + "]";
+    private final String prefix;
     private ChatColor messageColor = ChatColor.WHITE;
     private ChatColor infoColor = ChatColor.BLUE;
     private ChatColor warningColor = ChatColor.RED;
     private ChatColor confirmColor = ChatColor.GREEN;
 
-    /**
-     * Sets the prefix that will be sent to players at the start of the message
-     * Example: ChatColor.GOLD + "Fox" + ChatColor.WHITE + "Lib"
-     *
-     * @param prefix plugin prefix
-     */
-    public void setPrefix(String prefix) {
+    public Messenger(String pluginNamePrefix, String pluginNameSuffix) {
+        this.prefix = ChatColor.GRAY + "[" + ChatColor.GOLD + pluginNamePrefix + ChatColor.WHITE + pluginNameSuffix + ChatColor.GRAY + "]";
+    }
+
+    public Messenger(String prefix) {
         this.prefix = ChatColor.translateAlternateColorCodes('&', prefix);
     }
 
