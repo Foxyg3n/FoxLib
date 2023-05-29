@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Changes to prefix system in Messenger" />
+    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Make Messenger not abstract">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685368097492</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Make Messenger not abstract">
+      <created>1685368256301</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685368256301</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +185,7 @@
     <MESSAGE value="Added gson update method to JsonDataSaver" />
     <MESSAGE value="Made Messenger instantiable + changed Player to CommandSender" />
     <MESSAGE value="Changes to prefix system in Messenger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to prefix system in Messenger" />
+    <MESSAGE value="Make Messenger not abstract" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make Messenger not abstract" />
   </component>
 </project>

@@ -4,7 +4,7 @@ import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 
 /**
- * Utils for sending formated text to players
+ * Utils for sending formatted text to command senders (mainly players)
  */
 public class Messenger {
 
@@ -25,7 +25,7 @@ public class Messenger {
     /**
      * Sets the color that the text of message() will be sent
      *
-     ** @param color Chosed color
+     ** @param color Chosen color
      */
     public void setMessageColor(ChatColor color) {
         this.messageColor = color;
@@ -34,7 +34,7 @@ public class Messenger {
     /**
      * Sets the color that the text of info() will be sent
      *
-     * @param color Chosed color
+     * @param color Chosen color
      */
     public void setInfoColor(ChatColor color) {
         this.infoColor = color;
@@ -43,7 +43,7 @@ public class Messenger {
     /**
      * Sets the color that the text of warning() will be sent
      *
-     * @param color Chosed color
+     * @param color Chosen color
      */
     public void setWarningColor(ChatColor color) {
         this.warningColor = color;
@@ -52,50 +52,59 @@ public class Messenger {
     /**
      * Sets the color that the text of confirm() will be sent
      *
-     * @param color Chosed color
+     * @param color Chosen color
      */
     public void setConfirmColor(ChatColor color) {
         this.confirmColor = color;
     }
 
     /**
-     * Sends formated message to the player
+     * Sends formatted message to the player
      *
-     * @param recipent Recipent of the message
+     * @param recipent Recipient of the message
      * @param text The message
      */
-    public void message(CommandSender recipent, String text) {
-        recipent.sendMessage(prefix + " " + messageColor + text);
+    public void message(CommandSender recipent, String... text) {
+        recipent.sendMessage(prefix + " " + messageColor + concatenateTexts(text));
     }
 
     /**
-     * Sends formated information message to the player
+     * Sends formatted information message to the player
      *
-     * @param recipent Recipent of the message
+     * @param recipent Recipient of the message
      * @param text The message
      */
-    public void info(CommandSender recipent, String text) {
-        recipent.sendMessage(prefix + " " + infoColor + text);
+    public void info(CommandSender recipent, String... text) {
+        recipent.sendMessage(prefix + " " + infoColor + concatenateTexts(text));
     }
 
     /**
-     * Sends formated warning message to the player
+     * Sends formatted warning message to the player
      *
-     * @param recipent Recipent of the message
+     * @param recipent Recipient of the message
      * @param text The message
      */
-    public void warning(CommandSender recipent, String text) {
-        recipent.sendMessage(prefix + " " + warningColor + text);
+    public void warning(CommandSender recipent, String... text) {
+        recipent.sendMessage(prefix + " " + warningColor + concatenateTexts(text));
     }
 
     /**
-     * Sends formated confirm message to the player
+     * Sends formatted confirm message to the player
      *
-     * @param recipent Recipent of the message
+     * @param recipent Recipient of the message
      * @param text The message
      */
-    public void confirm(CommandSender recipent, String text) {
-        recipent.sendMessage(prefix + " " + confirmColor + text);
+    public void confirm(CommandSender recipent, String... text) {
+        recipent.sendMessage(prefix + " " + confirmColor + concatenateTexts(text));
+    }
+
+    private static String concatenateTexts(String... text) {
+        StringBuilder message = new StringBuilder();
+        for(int i = 0; i < text.length; i++) {
+            message.append(text[i]);
+            if(i != text.length - 1) message.append("\n");
+        }
+        return message.toString();
     }
 
 }
