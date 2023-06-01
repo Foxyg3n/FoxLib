@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Make Messenger not abstract">
+    <list default="true" id="bf9a1a27-804d-4259-9c0e-e15da56ae3c7" name="Changes" comment="Made message lines for Messenger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/CustomHeadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/CustomHeadUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/foxyg3n/utils/Messenger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,10 +48,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="userSettingsFile" value="C:\Users\piotr\.m2\settings.xml" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="2QImw2LEyMDKbhSGJiELcDZebQ6" />
@@ -63,11 +66,11 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Personal/Programming/MinecraftJavaPlugins/FoxLibRelease&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Workspace/Minecraft/Plugins/FoxLib&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.19911991&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -173,8 +176,19 @@
       <option name="project" value="LOCAL" />
       <updated>1685368256301</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Made message lines for Messenger">
+      <created>1685370269532</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685370269532</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:org.spigotmc:spigot-api" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
@@ -186,6 +200,7 @@
     <MESSAGE value="Made Messenger instantiable + changed Player to CommandSender" />
     <MESSAGE value="Changes to prefix system in Messenger" />
     <MESSAGE value="Make Messenger not abstract" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Messenger not abstract" />
+    <MESSAGE value="Made message lines for Messenger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made message lines for Messenger" />
   </component>
 </project>

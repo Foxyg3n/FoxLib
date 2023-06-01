@@ -10,7 +10,7 @@ public class Messenger {
 
     private final String prefix;
     private ChatColor messageColor = ChatColor.WHITE;
-    private ChatColor infoColor = ChatColor.BLUE;
+    private ChatColor infoColor = ChatColor.AQUA;
     private ChatColor warningColor = ChatColor.RED;
     private ChatColor confirmColor = ChatColor.GREEN;
 
@@ -64,8 +64,8 @@ public class Messenger {
      * @param recipent Recipient of the message
      * @param text The message
      */
-    public void message(CommandSender recipent, String... text) {
-        recipent.sendMessage(prefix + " " + messageColor + concatenateTexts(text));
+    public void message(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + messageColor + text);
     }
 
     /**
@@ -74,8 +74,8 @@ public class Messenger {
      * @param recipent Recipient of the message
      * @param text The message
      */
-    public void info(CommandSender recipent, String... text) {
-        recipent.sendMessage(prefix + " " + infoColor + concatenateTexts(text));
+    public void info(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + infoColor + text);
     }
 
     /**
@@ -84,8 +84,8 @@ public class Messenger {
      * @param recipent Recipient of the message
      * @param text The message
      */
-    public void warning(CommandSender recipent, String... text) {
-        recipent.sendMessage(prefix + " " + warningColor + concatenateTexts(text));
+    public void warning(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + warningColor + text);
     }
 
     /**
@@ -94,17 +94,8 @@ public class Messenger {
      * @param recipent Recipient of the message
      * @param text The message
      */
-    public void confirm(CommandSender recipent, String... text) {
-        recipent.sendMessage(prefix + " " + confirmColor + concatenateTexts(text));
-    }
-
-    private static String concatenateTexts(String... text) {
-        StringBuilder message = new StringBuilder();
-        for(int i = 0; i < text.length; i++) {
-            message.append(text[i]);
-            if(i != text.length - 1) message.append("\n");
-        }
-        return message.toString();
+    public void confirm(CommandSender recipent, String text) {
+        recipent.sendMessage(prefix + " " + confirmColor + text);
     }
 
 }
