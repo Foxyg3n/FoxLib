@@ -6,6 +6,10 @@ Repository of FoxLib library for easier and better Spigot development.
 <repository>
   <id>foxlib-repo</id>
   <url>https://raw.githubusercontent.com/Foxyg3n/FoxLib/release/</url>
+    <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+    </snapshots>
 </repository>
 ```
 ```xml
