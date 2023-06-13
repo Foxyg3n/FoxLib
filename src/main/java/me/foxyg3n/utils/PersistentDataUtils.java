@@ -35,6 +35,7 @@ public abstract class PersistentDataUtils {
     public static void addTag(ItemStack itemStack, String tag) {
         if(itemStack == null) throw new IllegalArgumentException("ItemStack cannot be null");
         if(tag == null) throw new IllegalArgumentException("Tag cannot be null");
+        if(itemStack.getItemMeta() == null) return;
         NamespacedKey namespacedKey = new NamespacedKey(NAMESPACE, tag.toLowerCase());
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.getPersistentDataContainer().set(namespacedKey, getTagType(String.class), "");
@@ -44,6 +45,7 @@ public abstract class PersistentDataUtils {
     public static void removeTag(ItemStack itemStack, String tag) {
         if(itemStack == null) throw new IllegalArgumentException("ItemStack cannot be null");
         if(tag == null) throw new IllegalArgumentException("Tag cannot be null");
+        if(itemStack.getItemMeta() == null) return;
         NamespacedKey namespacedKey = new NamespacedKey(NAMESPACE, tag.toLowerCase());
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.getPersistentDataContainer().remove(namespacedKey);
@@ -53,12 +55,14 @@ public abstract class PersistentDataUtils {
     public static boolean hasTag(ItemStack itemStack, String tag) {
         if(itemStack == null) throw new IllegalArgumentException("ItemStack cannot be null");
         if(tag == null) throw new IllegalArgumentException("Tag cannot be null");
+        if(itemStack.getItemMeta() == null) return false;
         NamespacedKey namespacedKey = new NamespacedKey(NAMESPACE, tag.toLowerCase());
         return itemStack.getItemMeta().getPersistentDataContainer().has(namespacedKey, getTagType(String.class));
     }
 
     public static <T> void storeValue(ItemStack itemStack, String key, T value) {
         ItemMeta itemMeta = itemStack.getItemMeta();
+        if(itemMeta == null) return;
         storeValue(itemMeta, key.toLowerCase(), value);
         itemStack.setItemMeta(itemMeta);
     }
@@ -74,6 +78,7 @@ public abstract class PersistentDataUtils {
 
     public static void removeValue(ItemStack itemStack, String key) {
         ItemMeta itemMeta = itemStack.getItemMeta();
+        if(itemMeta == null) return;
         removeValue(itemMeta, key.toLowerCase());
         itemStack.setItemMeta(itemMeta);
     }
@@ -87,6 +92,7 @@ public abstract class PersistentDataUtils {
 
     public static <T> T getValue(ItemStack itemStack, String key, Class<T> type) {
         ItemMeta itemMeta = itemStack.getItemMeta();
+        if(itemMeta == null) return null;
         return getValue(itemMeta, key.toLowerCase(), type);
     }
 
@@ -101,6 +107,7 @@ public abstract class PersistentDataUtils {
 
     public static <T> boolean hasValue(ItemStack itemStack, String key, Class<T> type) {
         ItemMeta itemMeta = itemStack.getItemMeta();
+        if(itemMeta == null) return false;
         return hasValue(itemMeta, key.toLowerCase(), type);
     }
 
