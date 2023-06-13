@@ -1,26 +1,21 @@
 # FoxLib
-Repository of FoxLib library for easier and better Spigot development.
+Repository of FoxLib library for easier and better Spigot development. (Currently WIP)
 
 ## Importing as dependency in Maven
 ```xml
 <repository>
-  <id>foxlib-repo</id>
-  <url>https://raw.githubusercontent.com/Foxyg3n/FoxLib/release/</url>
-    <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-    </snapshots>
+    <id>foxlib-snapshots</id>
+    <url>http://130.61.110.207:8080/snapshots</url>
 </repository>
 ```
 ```xml
 <dependency>
   <groupId>me.foxyg3n</groupId>
   <artifactId>FoxLib</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
-Make sure to shade the library into your build or if you're using Intellij,
-extract the library it into your build in Project Structure
+Make sure to shade the FoxLib into your build in maven, just toss this into your plugins section:
 
 ## Shade plugin
 ```xml
@@ -54,3 +49,8 @@ extract the library it into your build in Project Structure
 </build>
 ...
 ```
+
+If you're using Intellij Artifacts you just have to extract FoxLib into your jar doing the following:
+
+![image](intellij_step_1.png)
+![image](intellij_step_2.png)
