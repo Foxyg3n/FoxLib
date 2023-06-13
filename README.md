@@ -5,7 +5,7 @@ Repository of FoxLib library for easier and better Spigot development. (Currentl
 ```xml
 <repository>
     <id>foxlib-snapshots</id>
-    <url>http://130.61.110.207:8080/snapshots</url>
+    <url>https://130.61.110.207/snapshots</url>
 </repository>
 ```
 ```xml
